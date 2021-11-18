@@ -28,19 +28,19 @@ public class Program {
         });
     }
 
-    private ObjectMapper objectMapper() {
+    public ObjectMapper objectMapper() {
         return new ObjectMapper();
     }
 
-    private PokemonRepository pokemonRepository() {
+    public PokemonRepository pokemonRepository() {
         return new PokemonRepository();
     }
 
-    private PokemonService pokemonService(PokemonRepository pokemonRepository) {
+    public PokemonService pokemonService(PokemonRepository pokemonRepository) {
         return new PokemonService(pokemonRepository);
     }
 
-    private PokemonController pokemonController(PokemonService pokemonService) {
+    public PokemonController pokemonController(PokemonService pokemonService) {
         return new PokemonController(pokemonService);
     }
 }
